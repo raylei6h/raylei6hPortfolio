@@ -292,7 +292,4 @@ document.addEventListener('DOMContentLoaded', () => {
             hero.style.transform = `translateY(${scrolled * 0.5}px)`;
         }
     });
-
-    console.log('%c👋 Welcome to Christian Ilag\'s Portfolio!', 'color: #00d4ff; font-size: 20px; font-weight: bold;');
-    console.log('%c🚀 Built with passion and code', 'color: #ff006e; font-size: 14px;');
 });

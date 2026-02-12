@@ -65,7 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 showResponse(aiResponse, formatAIResponse(generatedText), 'success');
                 
             } catch (error) {
-                console.error('AI Generation Error:', error);
+                // CORS errors are expected when running locally (file://)
+                // The API works fine when deployed to a web server
+                // Using demo responses as fallback
                 
                 // Show actual error for debugging
                 if (error.message && !error.message.includes('demo')) {
@@ -445,10 +447,4 @@ document.addEventListener('DOMContentLoaded', () => {
             document.head.appendChild(pulseStyle);
         }
     });
-
-    console.log('%c🤖 AI Integrations loaded!', 'color: #00d4ff; font-size: 14px;');
-    console.log('%c💡 Tip: Get your free API keys from:', 'color: #ff006e; font-size: 12px;');
-    console.log('   - Hugging Face: huggingface.co');
-    console.log('   - OpenWeather: openweathermap.org');
-    console.log('   - NASA: api.nasa.gov');
 });

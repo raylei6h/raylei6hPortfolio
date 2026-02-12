@@ -291,6 +291,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(floatStyle);
-
-    console.log('%c✨ Animations loaded!', 'color: #8338ec; font-size: 14px;');
 });
