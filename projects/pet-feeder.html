@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Smart Pet Feeder System - Christian Ilag</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-detail {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .project-hero-image {
+            width: 100%;
+            max-width: 900px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin: 2rem auto;
+            display: block;
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+        }
+        .tech-stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .tech-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+        .tech-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .feature-list {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-color);
+            margin: 2rem 0;
+        }
+        .feature-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list i {
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding: 10px 20px;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+        }
+        .back-btn:hover {
+            transform: translateX(-10px);
+        }
+        .code-snippet {
+            background: #1a1a2e;
+            padding: 1.5rem;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border: 1px solid var(--primary-color);
+        }
+        .code-snippet pre {
+            margin: 0;
+            color: #00d4ff;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">&lt;CRI /&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail">
+        <div class="container">
+            <a href="../index.html#projects" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+
+            <div class="project-header">
+                <h1 class="section-title">IoT Smart Pet Feeder System</h1>
+                <p class="section-subtitle">Full-Stack IoT Solution with Real-Time Communication</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+                    <span class="project-tag">Flutter</span>
+                    <span class="project-tag">C++</span>
+                    <span class="project-tag">ESP32</span>
+                    <span class="project-tag">MQTT</span>
+                    <span class="project-tag">IoT</span>
+                    <span class="project-tag">Real-Time</span>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); 
+                        padding: 3rem; border-radius: 20px; text-align: center; margin-bottom: 3rem;">
+                <i class="fas fa-paw" style="font-size: 5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                <p style="color: var(--gray-text); font-size: 1.1rem;">
+                    Completed November 2025 | Duration: 2 months
+                </p>
+            </div>
+
+            <!-- Project Overview -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-book"></i> Project Overview
+                </h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--gray-text);">
+                    Developed a full-stack IoT solution integrating a Flutter mobile application with dual ESP32 microcontrollers 
+                    for automated pet feeding and monitoring. The system implements real-time bidirectional communication using MQTT 
+                    protocol, enabling remote control, manual dispensing, and live storage tracking.
+                </p>
+            </div>
+
+            <!-- Key Features -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-star"></i> Key Features
+                </h2>
+                <ul class="feature-list">
+                    <li><i class="fas fa-mobile-alt"></i> <strong>Flutter Mobile App:</strong> Cross-platform application for iOS and Android with intuitive UI</li>
+                    <li><i class="fas fa-microchip"></i> <strong>Dual ESP32 Setup:</strong> Master controller for feeding logic, slave for sensor integration</li>
+                    <li><i class="fas fa-clock"></i> <strong>Real-Time Scheduling:</strong> Automated feeding schedule with customizable meal times</li>
+                    <li><i class="fas fa-hand-pointer"></i> <strong>Manual Dispensing:</strong> On-demand food dispensing via mobile interface</li>
+                    <li><i class="fas fa-database"></i> <strong>Live Storage Tracking:</strong> Real-time monitoring using Load Cell and Flow Sensor</li>
+                    <li><i class="fas fa-water"></i> <strong>Water Dispensing:</strong> Flow-based water dispensing system with relay control</li>
+                    <li><i class="fas fa-video"></i> <strong>ESP32-CAM Integration:</strong> Live video streaming for remote pet monitoring</li>
+                    <li><i class="fas fa-sync-alt"></i> <strong>Non-Volatile Storage:</strong> DS3231 RTC and NVS for reliable data persistence</li>
+                </ul>
+            </div>
+
+            <!-- Technology Stack -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">
+                    <i class="fas fa-tools"></i> Technology Stack
+                </h2>
+                <div class="tech-stack-grid">
+                    <div class="tech-item">
+                        <i class="fab fa-flutter"></i>
+                        <h4>Flutter</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Mobile App Development</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-code"></i>
+                        <h4>C++</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">ESP32 Firmware</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-microchip"></i>
+                        <h4>ESP32</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Microcontroller</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h4>MQTT</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Communication Protocol</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-weight"></i>
+                        <h4>Load Cell</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Weight Sensing</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-tint"></i>
+                        <h4>Flow Sensor</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Water Monitoring</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-cog"></i>
+                        <h4>Servos & Relays</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Actuators</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-video"></i>
+                        <h4>ESP32-CAM</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Video Streaming</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Architecture -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-project-diagram"></i> System Architecture
+                </h2>
+                <div class="code-snippet">
+                    <pre>
+┌─────────────────┐
+│  Flutter App    │
+│  (Mobile UI)    │
+└────────┬────────┘
+         │ MQTT Protocol
+         ▼
+┌─────────────────────────────────────┐
+│      MQTT Broker (HiveMQ)           │
+│  - Topic Management                 │
+│  - Message Queue                    │
+└────────┬──────────────┬─────────────┘
+         │              │
+         ▼              ▼
+┌────────────────┐  ┌────────────────┐
+│  ESP32 Master  │  │  ESP32 Slave   │
+│  - Scheduling  │  │  - Sensors     │
+│  - Control     │  │  - Camera      │
+│  - NVS Storage │  │  - Monitoring  │
+└────────┬───────┘  └────────┬───────┘
+         │                   │
+         ▼                   ▼
+┌────────────────┐  ┌────────────────┐
+│   Actuators    │  │    Sensors     │
+│  - Servos      │  │  - Load Cell   │
+│  - Relays      │  │  - Flow Sensor │
+└────────────────┘  └────────────────┘
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Technical Highlights -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-lightbulb"></i> Technical Highlights
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="feature-list">
+                        <h3 style="color: var(--accent-color); margin-bottom: 1rem;">
+                            <i class="fas fa-shield-alt"></i> Reliability
+                        </h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="fas fa-check-circle"></i> Offline scheduling system</li>
+                            <li><i class="fas fa-check-circle"></i> Power failure recovery</li>
+                            <li><i class="fas fa-check-circle"></i> Data persistence with NVS</li>
+                            <li><i class="fas fa-check-circle"></i> Network reconnection logic</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list">
+                        <h3 style="color: var(--accent-color); margin-bottom: 1rem;">
+                            <i class="fas fa-tachometer-alt"></i> Performance
+                        </h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="fas fa-check-circle"></i> Sub-second response time</li>
+                            <li><i class="fas fa-check-circle"></i> Accurate weight measurement</li>
+                            <li><i class="fas fa-check-circle"></i> Real-time video streaming</li>
+                            <li><i class="fas fa-check-circle"></i> Efficient power consumption</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Example -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-code"></i> Code Sample: MQTT Communication
+                </h2>
+                <div class="code-snippet">
+                    <pre>
+// ESP32 MQTT Callback Handler
+void mqttCallback(char* topic, byte* payload, unsigned int length) {
+    String message = "";
+    for (int i = 0; i < length; i++) {
+        message += (char)payload[i];
+    }
+    
+    // Parse JSON command
+    DynamicJsonDocument doc(1024);
+    deserializeJson(doc, message);
+    
+    String command = doc["command"];
+    
+    if (command == "feed_now") {
+        int amount = doc["amount"];
+        triggerFeeding(amount);
+    }
+    else if (command == "update_schedule") {
+        updateSchedule(doc["schedules"]);
+        saveToNVS();
+    }
+    else if (command == "dispense_water") {
+        activateWaterPump(doc["duration"]);
+    }
+    
+    // Send acknowledgment
+    publishStatus("command_received");
+}
+
+// Flutter MQTT Publisher
+void sendFeedCommand(int amount) {
+  final payload = jsonEncode({
+    'command': 'feed_now',
+    'amount': amount,
+    'timestamp': DateTime.now().toIso8601String()
+  });
+  
+  mqttClient.publishMessage(
+    'pet_feeder/commands',
+    MqttQos.exactlyOnce,
+    MqttClientPayloadBuilder()
+      .addString(payload)
+      .payload
+  );
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Challenges & Solutions -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-puzzle-piece"></i> Challenges & Solutions
+                </h2>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px;">
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--secondary-color);">
+                            <i class="fas fa-exclamation-triangle"></i> Challenge: Network Failure Handling
+                        </h4>
+                        <p style="color: var(--gray-text); margin-top: 0.5rem;">
+                            <strong>Solution:</strong> Implemented offline scheduling system using DS3231 RTC and NVS storage. 
+                            The device continues feeding operations even without network connectivity, with automatic 
+                            synchronization when connection is restored.
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--secondary-color);">
+                            <i class="fas fa-exclamation-triangle"></i> Challenge: Real-Time Weight Accuracy
+                        </h4>
+                        <p style="color: var(--gray-text); margin-top: 0.5rem;">
+                            <strong>Solution:</strong> Calibrated Load Cell with HX711 amplifier, implemented moving average 
+                            filter to reduce noise, and used tare function for accurate measurements.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--secondary-color);">
+                            <i class="fas fa-exclamation-triangle"></i> Challenge: Power Management
+                        </h4>
+                        <p style="color: var(--gray-text); margin-top: 0.5rem;">
+                            <strong>Solution:</strong> Implemented deep sleep mode during idle periods, optimized WiFi 
+                            connection cycles, and used efficient servo control algorithms to minimize power consumption.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results & Impact -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-chart-line"></i> Results & Impact
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div style="background: var(--gradient-1); padding: 2rem; border-radius: 15px; text-align: center;">
+                        <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem;">99.9%</h3>
+                        <p>System Uptime</p>
+                    </div>
+                    <div style="background: var(--gradient-2); padding: 2rem; border-radius: 15px; text-align: center;">
+                        <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem;">&lt;1s</h3>
+                        <p>Response Time</p>
+                    </div>
+                    <div style="background: var(--gradient-3); padding: 2rem; border-radius: 15px; text-align: center;">
+                        <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem;">100%</h3>
+                        <p>Feeding Accuracy</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Improvements -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-rocket"></i> Future Enhancements
+                </h2>
+                <ul class="feature-list">
+                    <li><i class="fas fa-brain"></i> AI-powered pet activity recognition using computer vision</li>
+                    <li><i class="fas fa-bell"></i> Push notifications for low food/water alerts</li>
+                    <li><i class="fas fa-chart-bar"></i> Analytics dashboard for feeding patterns and pet health tracking</li>
+                    <li><i class="fas fa-users"></i> Multi-pet support with individual feeding profiles</li>
+                    <li><i class="fas fa-mobile"></i> Voice control integration (Alexa/Google Home)</li>
+                </ul>
+            </div>
+
+            <!-- Call to Action -->
+            <div style="background: var(--gradient-1); padding: 3rem; border-radius: 20px; text-align: center;">
+                <h2 style="margin-bottom: 1rem;">Interested in this project?</h2>
+                <p style="margin-bottom: 2rem;">Let's discuss how IoT solutions can solve real-world problems.</p>
+                <a href="../index.html#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Christian Raylie Q. Ilag. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

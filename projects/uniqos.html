@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniqOS - Custom Operating System - Christian Ilag</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-detail {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .project-hero-image {
+            width: 100%;
+            max-width: 900px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin: 2rem auto;
+            display: block;
+            box-shadow: 0 20px 60px rgba(131, 56, 236, 0.3);
+        }
+        .tech-stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .tech-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(131, 56, 236, 0.2);
+        }
+        .tech-item i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+        .feature-list {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-color);
+            margin: 2rem 0;
+        }
+        .feature-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list i {
+            color: var(--accent-color);
+            margin-right: 1rem;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding: 10px 20px;
+            background: var(--gradient-2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+        }
+        .back-btn:hover {
+            transform: translateX(-10px);
+        }
+        .code-snippet {
+            background: #1a1a2e;
+            padding: 1.5rem;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border: 1px solid var(--accent-color);
+        }
+        .code-snippet pre {
+            margin: 0;
+            color: #8338ec;
+            font-family: 'Courier New', monospace;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .team-member {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(131, 56, 236, 0.1);
+        }
+        .command-demo {
+            background: #000;
+            color: #0f0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+            border: 2px solid var(--accent-color);
+        }
+        .command-demo .prompt {
+            color: #0f0;
+        }
+        .command-demo .output {
+            color: #0af;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">&lt;CRI /&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section class="project-detail">
+        <div class="container">
+            <a href="../index.html#projects" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+
+            <div class="project-header">
+                <h1 class="section-title">UniqOS - Custom Operating System</h1>
+                <p class="section-subtitle">Built from Scratch with C# and COSMOS</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+                    <span class="project-tag">C#</span>
+                    <span class="project-tag">COSMOS</span>
+                    <span class="project-tag">VMWare</span>
+                    <span class="project-tag">OS Development</span>
+                    <span class="project-tag">Kernel Programming</span>
+                    <span class="project-tag">.NET</span>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #8338ec 0%, #ff006e 100%); 
+                        padding: 3rem; border-radius: 20px; text-align: center; margin-bottom: 3rem;">
+                <i class="fas fa-desktop" style="font-size: 5rem; color: white; margin-bottom: 1rem;"></i>
+                <p style="color: white; font-size: 1.1rem;">
+                    Completed December 2023 | Team Project | Pamantasan ng Lungsod ng Maynila
+                </p>
+            </div>
+
+            <!-- Project Overview -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <i class="fas fa-book"></i> Project Overview
+                </h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--gray-text);">
+                    UniqOS is a custom operating system built from scratch using C# and the COSMOS (C# Open Source Managed Operating System) 
+                    development kit. Designed as an academic tool for Operating Systems (CPE 0313-1) course, this project demonstrates 
+                    low-level system programming, kernel development, and OS architecture principles. UniqOS provides a command-line interface 
+                    for managing student records, calculating grades, and performing system operations—all running on custom kernel code.
+                </p>
+            </div>
+
+            <!-- Team Members -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <i class="fas fa-users"></i> Development Team
+                </h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <i class="fas fa-user-tie" style="font-size: 2rem; color: var(--accent-color);"></i>
+                        <h4 style="margin: 0.5rem 0;">Leonardo, Aibel Renzo T.</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Team Leader</p>
+                    </div>
+                    <div class="team-member">
+                        <i class="fas fa-user-tie" style="font-size: 2rem; color: var(--accent-color);"></i>
+                        <h4 style="margin: 0.5rem 0;">Antoni, Austine C.</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Technical Writer</p>
+                    </div>
+                    <div class="team-member">
+                        <i class="fas fa-user-tie" style="font-size: 2rem; color: var(--accent-color);"></i>
+                        <h4 style="margin: 0.5rem 0;">Bauyon, Jared Randalle B.</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Presenter</p>
+                    </div>
+                    <div class="team-member">
+                        <i class="fas fa-user-tie" style="font-size: 2rem; color: var(--primary-color);"></i>
+                        <h4 style="margin: 0.5rem 0;">Ilag, Christian Raylie Q.</h4>
+                        <p style="color: var(--primary-color); font-size: 0.9rem;">Developer</p>
+                    </div>
+                    <div class="team-member">
+                        <i class="fas fa-user-tie" style="font-size: 2rem; color: var(--accent-color);"></i>
+                        <h4 style="margin: 0.5rem 0;">Dee, Sean John Kobe D.</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Developer</p>
+                    </div>
+                    <div class="team-member">
+                        <i class="fas fa-user-tie" style="font-size: 2rem; color: var(--accent-color);"></i>
+                        <h4 style="margin: 0.5rem 0;">Mercado, Ed-Vir G.</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Technical Writer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Features -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <i class="fas fa-star"></i> Key Features
+                </h2>
+                <ul class="feature-list">
+                    <li><i class="fas fa-terminal"></i> <strong>Command Line Interface:</strong> Full CLI with multiple command support and responsive terminal</li>
+                    <li><i class="fas fa-lock"></i> <strong>Security Authentication:</strong> Password-protected boot sequence preventing unauthorized access</li>
+                    <li><i class="fas fa-user-graduate"></i> <strong>Student Record Management:</strong> Add and store student information (name, ID, course)</li>
+                    <li><i class="fas fa-calculator"></i> <strong>Grade Calculator:</strong> Input grades and automatically calculate weighted averages</li>
+                    <li><i class="fas fa-id-card"></i> <strong>Student Card Generator:</strong> Display student cards with pass/fail status (passing grade: 75+)</li>
+                    <li><i class="fas fa-exchange-alt"></i> <strong>Hexadecimal Converter:</strong> Convert hex values to decimal for debugging and grading</li>
+                    <li><i class="fas fa-power-off"></i> <strong>System Controls:</strong> Shutdown, restart, version check, and help desk commands</li>
+                    <li><i class="fas fa-code"></i> <strong>Custom Kernel:</strong> Built entirely in C# using COSMOS development kit</li>
+                </ul>
+            </div>
+
+            <!-- Command Demonstrations -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <i class="fas fa-terminal"></i> Command Demonstrations
+                </h2>
+                
+                <div class="command-demo">
+                    <div class="prompt">$ help</div>
+                    <div class="output">
+help -- List of commands<br>
+version -- Show kernel's version<br>
+shutdown -- Shut down the system<br>
+restart -- Restart the computer<br>
+hexdec -- Hexadecimal to decimal converter<br>
+studrec -- Add student info to the record<br>
+inpgrades -- Add students' grade<br>
+liststuds -- Generate students' cards
+                    </div>
+                </div>
+
+                <div class="command-demo">
+                    <div class="prompt">$ version</div>
+                    <div class="output">UniqOS kernel version 2.0</div>
+                </div>
+
+                <div class="command-demo">
+                    <div class="prompt">$ studrec</div>
+                    <div class="output">
+Enter student details:<br>
+Name: Juan Dela Cruz<br>
+Student ID: 2021<br>
+Course: Computer Engineering<br>
+Student record added successfully!
+                    </div>
+                </div>
+
+                <div class="command-demo">
+                    <div class="prompt">$ liststuds</div>
+                    <div class="output">
+List of Students with Grades:<br>
+Name: Juan Dela Cruz<br>
+Student ID: 2021<br>
+Program: Computer Engineering<br>
+Grades: 85, 90, 88, 92<br>
+Average Grade: 88.75<br>
+Status: Passed
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology Stack -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1.5rem;">
+                    <i class="fas fa-tools"></i> Technology Stack
+                </h2>
+                <div class="tech-stack-grid">
+                    <div class="tech-item">
+                        <i class="fab fa-microsoft"></i>
+                        <h4>C#</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Primary Language</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-cube"></i>
+                        <h4>COSMOS</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">OS Development Kit</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-server"></i>
+                        <h4>VMWare</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Virtual Machine</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-code"></i>
+                        <h4>Visual Studio</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">IDE</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-windows"></i>
+                        <h4>.NET Framework</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Runtime</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-download"></i>
+                        <h4>Inno Setup</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Installer Creator</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Architecture -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <i class="fas fa-project-diagram"></i> System Architecture
+                </h2>
+                <div class="code-snippet">
+                    <pre>
+┌─────────────────────────────────────┐
+│         User Terminal (CLI)         │
+│     Commands & User Input           │
+└───────────────┬─────────────────────┘
+                │
+                ▼
+┌─────────────────────────────────────┐
+│         UniqOS Kernel               │
+│    - Command Parser                 │
+│    - Authentication System          │
+│    - Student Record Manager         │
+│    - Grade Calculator               │
+│    - System Controls                │
+└───────────────┬─────────────────────┘
+                │
+                ▼
+┌─────────────────────────────────────┐
+│      COSMOS Framework Layer         │
+│    - Hardware Abstraction           │
+│    - Memory Management              │
+│    - System Calls                   │
+└───────────────┬─────────────────────┘
+                │
+                ▼
+┌─────────────────────────────────────┐
+│       VMWare Hypervisor             │
+│    Virtual Hardware Environment     │
+└───────────────┬─────────────────────┘
+                │
+                ▼
+┌─────────────────────────────────────┐
+│       Physical Hardware             │
+│    CPU, RAM, Storage, I/O           │
+└─────────────────────────────────────┘
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Technical Highlights -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <i class="fas fa-lightbulb"></i> Technical Highlights
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="feature-list">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">
+                            <i class="fas fa-cogs"></i> Kernel Development
+                        </h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="fas fa-check-circle"></i> Custom kernel written in C#</li>
+                            <li><i class="fas fa-check-circle"></i> Direct hardware interaction via COSMOS</li>
+                            <li><i class="fas fa-check-circle"></i> Memory management implementation</li>
+                            <li><i class="fas fa-check-circle"></i> Boot sequence control</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">
+                            <i class="fas fa-database"></i> Data Management
+                        </h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="fas fa-check-circle"></i> In-memory data structures</li>
+                            <li><i class="fas fa-check-circle"></i> Student record storage</li>
+                            <li><i class="fas fa-check-circle"></i> Grade calculation algorithms</li>
+                            <li><i class="fas fa-check-circle"></i> Data persistence across sessions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Example -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <i class="fas fa-code"></i> Code Sample: Student Management
+                </h2>
+                <div class="code-snippet">
+                    <pre>
+public class Student
+{
+    public string Name { get; set; }
+    public int StudentID { get; set; }
+    public string Course { get; set; }
+    public List&lt;int&gt; Grades { get; set; } = new List&lt;int&gt;();
+}
+
+public class Kernel : Sys.Kernel
+{
+    private List&lt;Student&gt; studentRecords = new List&lt;Student&gt;();
+    
+    protected override void BeforeRun()
+    {
+        // Security authentication
+        Console.WriteLine("Welcome to UniqOS. Please enter the password:");
+        string password = "admin";
+        string input = Console.ReadLine();
+        
+        if (input == password)
+        {
+            Console.Clear();
+            DisplayBootLogo();
+            Console.WriteLine("uniqOS successfully booted.");
+            Run();
+        }
+        else
+        {
+            Console.WriteLine("Password is wrong, try again");
+            BeforeRun(); // Retry authentication
+        }
+    }
+    
+    private void ListStudentsWithGrades()
+    {
+        foreach (var student in studentRecords)
+        {
+            Console.WriteLine($"Name: {student.Name}");
+            Console.WriteLine($"Student ID: {student.StudentID}");
+            Console.WriteLine($"Program: {student.Course}");
+            
+            if (student.Grades.Count > 0)
+            {
+                double averageGrade = student.Grades.Average();
+                Console.WriteLine($"Average Grade: {averageGrade:F2}");
+                
+                string status = averageGrade < 75 ? "Failed" : "Passed";
+                Console.WriteLine($"Status: {status}");
+            }
+        }
+    }
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- System Requirements -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <i class="fas fa-server"></i> System Requirements
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="feature-list">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Hardware</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="fas fa-memory"></i> Memory: 256MB minimum</li>
+                            <li><i class="fas fa-hdd"></i> Hard Disk: 512MB IDE</li>
+                            <li><i class="fas fa-microchip"></i> CPU: x86/x64 compatible</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Software</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="fas fa-check"></i> VMWare Workstation 17+</li>
+                            <li><i class="fas fa-check"></i> Visual Studio 2022</li>
+                            <li><i class="fas fa-check"></i> COSMOS User Kit 20221121</li>
+                            <li><i class="fas fa-check"></i> Inno Setup 6.2.2+</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenges & Solutions -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <i class="fas fa-puzzle-piece"></i> Challenges & Solutions
+                </h2>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px;">
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--secondary-color);">
+                            <i class="fas fa-exclamation-triangle"></i> Challenge: Memory Constraints
+                        </h4>
+                        <p style="color: var(--gray-text); margin-top: 0.5rem;">
+                            <strong>Solution:</strong> Implemented efficient data structures using Lists and optimized memory 
+                            allocation. Limited student records to prevent memory overflow in the constrained VM environment.
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--secondary-color);">
+                            <i class="fas fa-exclamation-triangle"></i> Challenge: No Built-in Console Buffer
+                        </h4>
+                        <p style="color: var(--gray-text); margin-top: 0.5rem;">
+                            <strong>Solution:</strong> Designed the interface to work without scrolling capability. Implemented 
+                            command-based navigation and clear output formatting to work within single-screen limitations.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--secondary-color);">
+                            <i class="fas fa-exclamation-triangle"></i> Challenge: Debugging Low-Level Code
+                        </h4>
+                        <p style="color: var(--gray-text); margin-top: 0.5rem;">
+                            <strong>Solution:</strong> Leveraged COSMOS integrated debugger with Visual Studio. Implemented 
+                            comprehensive error handling and created the hexdec tool to interpret system error codes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Outcomes -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <i class="fas fa-graduation-cap"></i> Learning Outcomes
+                </h2>
+                <ul class="feature-list">
+                    <li><i class="fas fa-brain"></i> Deep understanding of OS architecture and kernel-level programming</li>
+                    <li><i class="fas fa-microchip"></i> Experience with low-level hardware abstraction and system calls</li>
+                    <li><i class="fas fa-code"></i> Advanced C# programming including memory management and data structures</li>
+                    <li><i class="fas fa-bug"></i> Debugging skills for complex system-level issues</li>
+                    <li><i class="fas fa-users"></i> Collaborative development in a team environment</li>
+                    <li><i class="fas fa-book"></i> Technical documentation and project proposal writing</li>
+                </ul>
+            </div>
+
+            <!-- Project Stats -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <i class="fas fa-chart-line"></i> Project Statistics
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmin(200px, 1fr)); gap: 2rem;">
+                    <div style="background: var(--gradient-2); padding: 2rem; border-radius: 15px; text-align: center;">
+                        <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem;">16 Weeks</h3>
+                        <p>Development Time</p>
+                    </div>
+                    <div style="background: var(--gradient-3); padding: 2rem; border-radius: 15px; text-align: center;">
+                        <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem;">6 Members</h3>
+                        <p>Team Size</p>
+                    </div>
+                    <div style="background: var(--gradient-1); padding: 2rem; border-radius: 15px; text-align: center;">
+                        <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem;">8+</h3>
+                        <p>Core Commands</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #8338ec 0%, #00d4ff 100%); padding: 2rem; border-radius: 15px; text-align: center;">
+                        <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem;">100%</h3>
+                        <p>Custom Kernel</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Target Audience -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <i class="fas fa-users"></i> Target Audience
+                </h2>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                        UniqOS was designed specifically for academic environments, targeting:
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div style="padding: 1rem; background: rgba(131, 56, 236, 0.1); border-radius: 10px;">
+                            <i class="fas fa-chalkboard-teacher" style="font-size: 2rem; color: var(--accent-color);"></i>
+                            <h4 style="margin: 1rem 0 0.5rem;">Teachers</h4>
+                            <p style="color: var(--gray-text); font-size: 0.9rem;">
+                                Simplify student grade management and record keeping
+                            </p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(131, 56, 236, 0.1); border-radius: 10px;">
+                            <i class="fas fa-user-tie" style="font-size: 2rem; color: var(--accent-color);"></i>
+                            <h4 style="margin: 1rem 0 0.5rem;">Administrators</h4>
+                            <p style="color: var(--gray-text); font-size: 0.9rem;">
+                                Manage student records and generate reports efficiently
+                            </p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(131, 56, 236, 0.1); border-radius: 10px;">
+                            <i class="fas fa-file-alt" style="font-size: 2rem; color: var(--accent-color);"></i>
+                            <h4 style="margin: 1rem 0 0.5rem;">Registrars</h4>
+                            <p style="color: var(--gray-text); font-size: 0.9rem;">
+                                Generate student cards and maintain academic records
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Enhancements -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <i class="fas fa-rocket"></i> Future Enhancements
+                </h2>
+                <ul class="feature-list">
+                    <li><i class="fas fa-desktop"></i> Graphical User Interface (GUI) implementation</li>
+                    <li><i class="fas fa-scroll"></i> Console buffer support for scrolling capability</li>
+                    <li><i class="fas fa-database"></i> Persistent storage with file system support</li>
+                    <li><i class="fas fa-trash"></i> Delete and modify student record functions</li>
+                    <li><i class="fas fa-network-wired"></i> Network capabilities for multi-user access</li>
+                    <li><i class="fas fa-shield-alt"></i> Enhanced security with encrypted password storage</li>
+                    <li><i class="fas fa-print"></i> Export student cards to PDF or image formats</li>
+                    <li><i class="fas fa-chart-bar"></i> Advanced analytics and reporting features</li>
+                </ul>
+            </div>
+
+            <!-- Call to Action -->
+            <div style="background: var(--gradient-2); padding: 3rem; border-radius: 20px; text-align: center;">
+                <h2 style="margin-bottom: 1rem;">Interested in OS Development?</h2>
+                <p style="margin-bottom: 2rem;">Let's discuss low-level programming and system architecture.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="../index.html#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </a>
+                    <a href="https://github.com/CosmosOS/Cosmos" target="_blank" class="btn btn-outline" style="background: rgba(255,255,255,0.1);">
+                        <i class="fab fa-github"></i> View COSMOS on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Christian Raylie Q. Ilag. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

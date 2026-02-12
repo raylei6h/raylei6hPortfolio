@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Raylie Q. Ilag - Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Full-page particle background -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">&lt;CRI /&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#ai-demo" class="nav-link">AI Demo</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="glitch" data-text="CHRISTIAN RAYLIE Q. ILAG">CHRISTIAN RAYLIE Q. ILAG</h1>
+                <h2 class="subtitle">Computer Engineering Student | Full-Stack Developer | IoT Enthusiast</h2>
+                <p class="hero-description">Building innovative solutions with cutting-edge technologies</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="assets/CV_ILAG-2025.pdf" class="btn btn-outline" download>Download CV</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-animation">
+                    <pre><code id="typing-code"></code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p class="lead">Passionate Computer Engineering undergraduate with a strong foundation in full-stack development and IoT systems.</p>
+                    <p>I specialize in creating practical software solutions, from employee management systems to IoT-enabled smart devices. My experience spans across multiple programming languages and frameworks, with a particular interest in emerging technologies like AI, Blockchain, and Cloud Computing.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <span>10+ Projects Completed</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Computer Engineering Student</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-microchip"></i>
+                            <span>IoT & Embedded Systems</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Programming Languages</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="4">0</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
+            <div class="skills-container">
+                <!-- Backend Skills -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-server"></i> Backend Development</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>C++</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Java</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>SQL</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>C#</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Skills -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>HTML/CSS</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Flutter</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Skills -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fas fa-tools"></i> Other Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">IoT</span>
+                        <span class="skill-tag">MQTT</span>
+                        <span class="skill-tag">ESP32</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Blockchain</span>
+                        <span class="skill-tag">Cloud Computing</span>
+                        <span class="skill-tag">Cybersecurity</span>
+                        <span class="skill-tag">Lua Scripting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- IoT Smart Pet Feeder -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="assets/images/pet-feeder.jpg" alt="IoT Smart Pet Feeder" onerror="this.src='assets/images/placeholder.jpg'">
+                        <div class="project-overlay">
+                            <a href="projects/pet-feeder.html" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">IoT</span>
+                        <span class="project-tag">Flutter</span>
+                        <span class="project-tag">MQTT</span>
+                        <h3>IoT Smart Pet Feeder System</h3>
+                        <p>Full-stack IoT solution with Flutter mobile app, dual ESP32 microcontrollers, real-time bidirectional communication, and live video streaming.</p>
+                        <div class="project-tech">
+                            <i class="fab fa-flutter"></i>
+                            <i class="fas fa-microchip"></i>
+                            <i class="fas fa-video"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UniqOS -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="assets/images/uniqos.jpg" alt="UniqOS" onerror="this.src='assets/images/placeholder.jpg'">
+                        <div class="project-overlay">
+                            <a href="projects/uniqos.html" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">C#</span>
+                        <span class="project-tag">OS Development</span>
+                        <h3>UniqOS - Custom Operating System</h3>
+                        <p>Custom operating system project built with C#. Led team of developers from initial architecture to debugging and performance optimization.</p>
+                        <div class="project-tech">
+                            <i class="fas fa-desktop"></i>
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Ordering System -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="assets/images/pizza-system.jpg" alt="Pizza Ordering System" onerror="this.src='assets/images/placeholder.jpg'">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">UI/UX</span>
+                        <h3>Pizza Ordering System</h3>
+                        <p>User-friendly pizza ordering system with JavaUI and SQL database. Features order management and seamless integration.</p>
+                        <div class="project-tech">
+                            <i class="fab fa-java"></i>
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Employee Record System -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="assets/images/ebc-system.jpg" alt="EBC Employee Record" onerror="this.src='assets/images/placeholder.jpg'">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Management</span>
+                        <h3>EBC Employee Record System</h3>
+                        <p>Comprehensive employee record management system developed using JavaScript. Led the development team.</p>
+                        <div class="project-tech">
+                            <i class="fab fa-js"></i>
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Booking System -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="assets/images/hotel-booking.jpg" alt="Hotel Booking System" onerror="this.src='assets/images/placeholder.jpg'">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Real-time</span>
+                        <h3>Simple Hotel Booking System</h3>
+                        <p>Real-time hotel booking system with optimized user interface for ease of use.</p>
+                        <div class="project-tech">
+                            <i class="fab fa-js"></i>
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Library System -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="assets/images/library-system.jpg" alt="Library System" onerror="this.src='assets/images/placeholder.jpg'">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Management</span>
+                        <h3>Simple Library Borrow System</h3>
+                        <p>Library management system with real-time book tracking and user-friendly interface.</p>
+                        <div class="project-tech">
+                            <i class="fab fa-js"></i>
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI/Prompt Engineering Demo Section -->
+    <section id="ai-demo" class="ai-demo">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">AI & Prompt Engineering Showcase</h2>
+            <p class="section-subtitle">Demonstrating skills in AI integration and prompt engineering</p>
+            
+            <div class="ai-demos">
+                <!-- Text Generation Demo -->
+                <div class="demo-card" data-aos="fade-up">
+                    <div class="demo-header">
+                        <h3><i class="fas fa-brain"></i> AI Text Generation</h3>
+                        <span class="demo-badge">Powered by Hugging Face API</span>
+                    </div>
+                    <div class="demo-content">
+                        <textarea id="prompt-input" placeholder="Enter your prompt here... (e.g., 'Write a creative description for a smart home device')" rows="3"></textarea>
+                        <div class="demo-controls">
+                            <button id="generate-btn" class="btn btn-primary">
+                                <i class="fas fa-magic"></i> Generate
+                            </button>
+                            <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                        </div>
+                        <div id="ai-response" class="ai-response"></div>
+                    </div>
+                </div>
+
+                <!-- Weather API Demo -->
+                <div class="demo-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="demo-header">
+                        <h3><i class="fas fa-cloud-sun"></i> Live Weather Integration</h3>
+                        <span class="demo-badge">OpenWeatherMap API</span>
+                    </div>
+                    <div class="demo-content">
+                        <div class="weather-input-group">
+                            <input type="text" id="city-input" placeholder="Enter city name (e.g., Manila)" value="Manila">
+                            <button id="weather-btn" class="btn btn-primary">
+                                <i class="fas fa-search"></i> Get Weather
+                            </button>
+                        </div>
+                        <div id="weather-result" class="weather-result"></div>
+                    </div>
+                </div>
+
+                <!-- NASA APOD Demo -->
+                <div class="demo-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="demo-header">
+                        <h3><i class="fas fa-space-shuttle"></i> NASA Picture of the Day</h3>
+                        <span class="demo-badge">NASA API</span>
+                    </div>
+                    <div class="demo-content">
+                        <button id="nasa-btn" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> Fetch Today's Space Image
+                        </button>
+                        <div id="nasa-result" class="nasa-result"></div>
+                    </div>
+                </div>
+
+                <!-- Random Quote Generator with AI Analysis -->
+                <div class="demo-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="demo-header">
+                        <h3><i class="fas fa-quote-left"></i> Inspirational Quotes</h3>
+                        <span class="demo-badge">Quotable API</span>
+                    </div>
+                    <div class="demo-content">
+                        <button id="quote-btn" class="btn btn-primary">
+                            <i class="fas fa-lightbulb"></i> Get Random Quote
+                        </button>
+                        <div id="quote-result" class="quote-result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prompt Engineering Examples -->
+            <div class="prompt-examples" data-aos="fade-up">
+                <h3>Prompt Engineering Examples</h3>
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <h4>Technical Documentation</h4>
+                        <p class="example-prompt">"Generate comprehensive API documentation for a RESTful service that manages user authentication, including endpoint descriptions, request/response formats, and error handling."</p>
+                    </div>
+                    <div class="example-card">
+                        <h4>Code Generation</h4>
+                        <p class="example-prompt">"Create a Python function that implements a binary search algorithm with type hints, docstrings, and handles edge cases for empty arrays and single-element arrays."</p>
+                    </div>
+                    <div class="example-card">
+                        <h4>System Design</h4>
+                        <p class="example-prompt">"Design a scalable microservices architecture for an e-commerce platform, including service boundaries, communication protocols, database choices, and caching strategies."</p>
+                    </div>
+                    <div class="example-card">
+                        <h4>IoT Integration</h4>
+                        <p class="example-prompt">"Explain how to implement MQTT protocol for real-time communication between ESP32 devices and a mobile application, including QoS levels and connection persistence."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Certifications & Seminars</h2>
+            <div class="cert-grid">
+                <div class="cert-card" data-aos="fade-up">
+                    <div class="cert-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Cisco Networking Academy</h3>
+                    <p>Introduction to Internet-of-Everything</p>
+                    <span class="cert-date">June 2022</span>
+                </div>
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Blockchain Technology</h3>
+                    <p>An Introduction to Blockchain Technology</p>
+                    <span class="cert-date">August 2024</span>
+                </div>
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>Landscape of Cybersecurity</p>
+                    <span class="cert-date">March 2024</span>
+                </div>
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cert-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Google Cloud Platform</h3>
+                    <p>Cybersecurity on GCP</p>
+                    <span class="cert-date">May 2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <p class="section-subtitle">Let's build something amazing together</p>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:christianilag19208@gmail.com">christianilag19208@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+639619945392">+(63) 961 994 5392</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Manila, Philippines</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/raylei6h/" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/christian-ilag/" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form" data-aos="fade-left">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div id="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Christian Raylie Q. Ilag. All rights reserved.</p>
+                <p>Built with passion and code</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/smooth-scroll.js"></script>
+    <script src="scripts/ai-integrations.js"></script>
+</body>
+</html>

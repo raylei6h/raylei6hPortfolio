@@ -1,0 +1,520 @@
+Republic of the Philippines
+PAMANTASAN NG LUNGSOD NG MAYNILA
+(University of the City of Manila)
+Muralla Street, Intramuros Manila 1002, Philippines
+
+COLLEGE OF ENGINEERING AND TECHNOLOGY
+Computer Engineering Department
+
+
+
+
+
+
+
+CPE 0313-1 - OPERATING SYSTEMS
+
+
+Customized Operating System Project Proposal Project Title: UniqOS
+Group 2
+
+MembersRoleLeonardo, Aibel Renzo T.LeaderAntoni, Austine C.Technical WriterBauyon, Jared Randalle B.PresenterDee, Sean John Kobe D.DeveloperIlag, Christian Raylie Q.DeveloperMercado, Ed-Vir G.Technical Writer
+Date: December 7, 2023
+
+Submitted to: Engr. Michael R. Ramos
+
+Table of Contents
+
+1. Introduction	4
+1.1 Project Overview	4
+1.2 Target Audience	4
+2. Project Scope	5
+2.1 Features	5
+2.2 Limitations	6
+3. High-Level Design	6
+3.1 Architecture	6
+3.2 System Requirements	7
+4. Implementation Plan	8
+4.1 Timeline	8
+4.2 Milestones (Screenshots of the Milestones)	8
+5. Technical Details	10
+5.1 Programming Language	10
+5.2 Tools and Libraries	10
+6. Customization	11
+6.1 Custom Features	11
+6.2 User Interface Customization	12
+7. Documentation	13
+7.1 User Manual	13
+7.2 Developer's Guide	19
+8. Risks and Challenges	20
+8.1 Identified Risks	20
+8.2 Mitigation Strategies	20
+9. Conclusion	20
+References	22
+Appendix	23
+Installation Links	23
+VMware Workstation 17 Player	23
+Visual Studio 2022	23
+Cosmos User Kit 20221121	23
+Inno Setup (innosetup-6.2.2.exe)	23
+UniqOS	23
+Source Code	24
+Kernel.cs	24
+UniqOS.csproj	28
+Cosmo.Build.Targets	29
+
+
+1. Introduction
+1.1 Project Overview
+UniqOS is a simple and interactive operating system (OS) that allows academic keypersons such as teachers, administrators, and registrars to create and store student records. The OS consists of the basic functions such as reboot, shut down, version viewer, and a help desk. UniqOS also includes features such as hexadecimal to decimal converter, student record generator, grade calculator, and student card generator. Furthermore, the OS has a primary security feature which requires the user to enter a password before booting the OS.
+1.2 Target Audience
+UniqOS is an operating system that was mainly designed for academic keypersons. This covers teachers, administrators, and registrars. The OS is designed in a way that these people can simplify keeping a record of their students, as well as in using it to compute for the students' grades-and from there, they can generate the students' school card.
+The developers aimed the system to run on the following hardware environments:
+
+a. Desktop computer: This includes the physical components of a desktop computer, such as the CPU, motherboard, RAM, hard drive, and peripherals like a monitor, keyboard, and mouse.
+b. Laptop: This includes the physical components of a laptop computer, such as the CPU, motherboard, RAM, hard drive, and built-in peripherals like a keyboard, touchpad, and screen.
+c. Server: This includes the physical components of a server, such as the CPU, RAM, hard drives, and network cards, as well as peripherals like the power supply, cooling system, and chassis.
+
+For now, UniqOS primarily runs on a virtual manager particularly VMWare, which will be discussed later in the paper. Considering the former statement, the group considered the following system specifications and requirements based on the virtual machine used:
+
+
+System Requirements
+
+2. Project Scope
+2.1 Features
+
+
+List of the Available Functions
+
+Listed below are the essential components and unique functionalities of UniqOS:
+
+a. help- This displays the list of commands and features the OS offers.
+b. version- This displays the kernel's version.
+c. restart- This allow the user to reboot the OS.
+d. hexdec- this function allows the user to convert a hexadecimal value to decimal.
+
+e. studrec- This allows the user to add student information to the student record.
+f. inpgrades- This function allows the user to enter the student's grades.
+g. liststuds- this displays the student's information together with the averaged grade. This
+enables the OS to determine whether the student passed or failed.
+h. Security feature- The system requires the user to input the password before booting.
+
+2.2 Limitations
+UniqOS is a simple system that is designed for the user to understand how an operating system works-thus, it has its limitations. First, functionalities may not execute well due to memory constraints such as limited number of students can only be added to the record. Second, buffers and consoles are not added to the system; therefore, the user is unable to scroll up or down. Third, the user is unable to clear the prompt. It is only possible at reboot or shutdown. Fourth, the restart/reboot function will not cycle due to it being inside a virtual machine (i.e., stuck in debug connection). Fifth, removal is not a function because all the data is deleted at reboot. Lastly, only the system administrator can change the password.
+
+
+3. High-Level Design
+3.1 Architecture
+Here is the overview of the architecture of UniqOS, including the major components and their interactions:
+UniqOS System Architecture
+
+The virtual machine manager, particularly VMWare, allows the user to run multiple OS'es on a single server. From the user commands as entered on the terminal, it will be passed through the kernel to access privileged functionalities until the OS.
+
+3.2 System Requirements
+As mentioned above here are the system requirement for the OS. The group mainly considered the specifications indicated in VMWare as it was used by the developers to run the OS.
+A. Hardware Requirements:
+a. Memory: 256MB
+b. Hard Disk (IDE): 512MB
+B. Software Requirements: (these programs must be pre-installed to run the OS)
+a. VMWare Workstation
+b. Visual Studio
+c. Inno Setup
+d. COSMOS User Kit
+
+
+System Requirements
+
+4. Implementation Plan
+4.1 Timeline
+Present a timeline for the development of your OS, outlining major milestones and deadlines.
+
+WeekDate (Deadline)Major MilestonesWeek 1Aug. 31 - Sept. 2, 2023Discussion of the OS ProjectWeeks 2-15Sept. 3 - Dec. 2, 2023Conceptualization and Demo
+of an OSWeek 16Dec. 3 - Dec. 7, 2023Finalization of the OS and
+Final Defense
+
+4.2 Milestones (Screenshots of the Milestones)
+Displayed below are the specific milestones, such as kernel development completion, user interface implementation, and customization features integration.
+
+
+Nov. 22: The group started to work on the project
+
+
+
+
+Nov. 25: The group started drafting the kernel
+
+
+
+Dec. 1: The Latest Functions of the UniqOS
+
+
+
+5. Technical Details
+5.1 Programming Language
+a. C#
+
+UniqOS is built mainly by using C# for its main functions. To give an overview, C# is an object- oriented and type-safe programming language. A type-safe programming language refers to a programming language that mandates its compiler to validate data types while compiling and throw an error if a variable was assigned to the wrong type). The group chose C# because it is related to the C family of languages which the group is familiar with. Additionally, the main functions are accessed by typing "help" on the command prompt (BillWagner, 2023).
+b. COSMOS
+
+Furthermore, C# allowed the developers to construct the kernel using .NET. Specifically, the developers used COSMOS (C# Open-Source Managed Operating System) which is an operating system development kit which uses Visual Studio as its development environment (Develop Your Own OS in .NET - COSMOS, 2017).
+
+
+5.2 Tools and Libraries
+List any third-party tools or libraries that you plan to use and explain their relevance.
+
+a. VMWare
+
+The developers used VMWare in order to run the created OS, UniqOS. To give an overview, through the VMWare server, a hypervisor is installed on the physical server to allow for multiple
+
+virtual machines to run on the same physical server. Each VM can run its own operating system. This allows multiple operating systems to run on one physical server (Bastiaansen & Lanigan, 2019).
+b. COSMOS
+
+As mentioned above, COSMOS was used to develop the kernel of UniqOS. To further delve into this development kit, it also includes an integrated project type in Visual Studio, and an integrated debugger. COSMOS also allows users to directly debug your operating system using Visual Studio by utilizing breakpoints.
+
+
+6. Customization
+6.1 Custom Features
+
+
+Help and Version function in play
+
+
+a. Security Feature
+
+The main security feature of the OS is to require its user to enter the set password by the administrator before booting. This is a simple security feature which will be fortified in future upgrade/s.
+
+b. Hexadecimal to decimal converter
+
+The group also included a hexadecimal to decimal converter for its users whenever a system message (I.e., error or exception) is displayed. It helps convert hexadecimal values such as the alphabets a through f to decimal values which helps a lot in grading because there are instances that the grades used are in alphabet not numeric. Moreover, on the technical side, this will help its users and administrator to be able to identify or resolve (if they are able) system messages or issue.
+c. Student Record
+i. Student Record
+
+This allows the employee to store student records such as the student's name,
+number, and their course.
+
+ii. Input of grades
+
+The group also added a feature that allows its user to enter the grades of the student and will be able to compute for its average.
+iii. List of grades and computing of average
+
+Lastly, this feature displays the student record. Included in the list is the weighted average of the student. Furthermore, it is able to determine whether the student passed or failed based on his/her average grade.
+6.2 User Interface Customization
+Command Line Interface or CLI
+
+The user interface of the OS is a command line interface (CLI). The user can enter his/her desired commands; in return, the system will acknowledge the command, access its privilege features (i.e., from the kernel), and respond to the user's request through the terminal.
+
+7. Documentation
+7.1 User Manual
+Step 1. To be able to run the program, make sure to install VMWare, Visual Studio, Cosmos, and Inno Setup.
+The following are the functions of each program:
+
+a. VMWare Workstation 17 Player
+
+VMware Workstation is a line of desktop hypervisor which lets users run virtual machines. This allows the created OS to run even if there is an existing installed OS.
+
+
+VMware Workstation Interface
+
+b. Visual Studio 2022 IDE
+
+Visual Studio is an integrated development environment (IDE) that the group used to write, edit, debug, and build code, and then deploy the OS.
+
+
+Inside the Visual Studio 2022 IDE
+
+c. Cosmos User Kit 20221121
+
+Integrated with Visual Studio, Cosmos is an OS development or construction kit. The group was able to build an OS using C# as the main programming language.
+d. Inno Setup
+
+It provides an easy-to-use and flexible platform for software developers to package their applications into setup programs that can be easily distributed and installed on Windows operating systems.
+Step 2. After installing the required software programs, launch Visual Studio. Then, open the .sln file.
+
+
+
+UniqOS sln file
+
+Step 3. After the file has been opened, click Run.
+
+
+Inside the Visual Studio 2022 IDE
+
+Step 4. To boot the system, enter the password (password: admin). Then press enter.
+
+
+Logging in to the UniqOS
+
+Step 5. After entering the correct password, the OS will now be boobooted,d the figure below should be displayed:
+
+
+Screen after UniqOS is booted
+
+Option 1. To open the help desk, it can be done in four ways:
+
+a. Type "help"
+
+
+"help" command
+
+b. Type "cmd"
+
+
+"cmd" command
+
+c. Type "cmds"
+
+
+"cmds" command
+
+d. Type "commands"
+
+
+"commands" command
+
+All the available functions and features will now be displayed.
+
+
+Option 2. To view the version of UniqOS, type "version"
+
+
+"version" command
+
+Option 3. To shut down the system, type "shutdown"
+
+
+"shutdown" command
+
+Option 4. To restart the system, type "restart"
+
+
+Option 5. To use the hexadecimal to decimal converter, type "hexdec"
+
+
+"hexdec" command
+
+Option 6. To add students to the student record, type "studrec"
+
+
+"studrec" command
+
+Option 7. To enter the grades of the students added in the record, type "inpgrades"
+
+
+"inpgrades" commands
+
+Option 8. To display the list of students together with their averaged grades, type "liststuds"
+
+
+"liststuds" command
+
+Note: For the student to pass, the average must be greater than 75, otherwise, the student
+failed.
+
+7.2 Developer's Guide
+The developers designed a simple operating system to primarily understand how it works, and how it is built and constructed. Furthermore, the developers designed the OS to be interactive. Adding a user interface, particularly CLI, the user can easily navigate the system and type in his/her commands. Lastly, UniqOS is built in a way that it can be easily modified. Moreover, it is in such a way that the developers used a familiar programming language, C#, and a very handy OS development kit, COSMOS.
+
+8. Risks and Challenges
+8.1 Identified Risks
+Since UniqOS is designed to be a simple program here are its following risks:
+
+a. Overloading of memory
+The system can only store a limited number of students in its record.
+b. CPU exception error
+There may be times when there is sudden crashing of the program. One of its causes is when the user often runs the OS.
+8.2 Mitigation Strategies
+Propose strategies for mitigating the identified risks.
+
+The developers have listed the following mitigation strategies to the identified risks:
+
+a. Regular maintenance
+Regularly maintaining the system will help avoid system crashing, fortify its security feature, and other issues that may arise.
+b. Update of features
+The developers must be able to rewrite concise and cohesive code structure for the features as this will help in making the system more presentable.
+c. Upgrade of hardware/software specifications
+To avoid memory overloading or CPU exception errors the user's handled device's
+specifications must meet the requirements of the system.
+d. Inclusion of buffer
+This is in relation to the user interface. One of its limitations include a static prompt. The developers must resolve this issue by including buffers such as inserting a console.
+9. Conclusion
+The project is the venture of the group into fully understanding the beauty of operating systems. With that, through weeks of various OS lessons, the group successfully created an operating system named UniqOS. This was made in pursuit of helping academics and professions alike in their daily record-taking jobs.
+One unique functionality the group boasts is the "hexdec" command. It helps convert hexadecimal values such as the alphabets a through f to decimal values that helps a lot in grading. The reason is there are instances that the grades used are in alphabet not numeric which might cause confusion.
+
+Ultimately, there are still some improvements to be done. It is not the end of UniqOS. With rapid technological advancements and the emergence of virtual machines, UniqOS still has a lot of room to fill. With that, as computer engineers, the group is more than willing to continue development of UniqOS.
+
+References
+Develop your own OS in .NET - COSMOS. (2017, May 21). COSMOS. https://www.gocosmos.org/docs/develop-your-own-os-in-dotnet/
+BillWagner. (2023, May 4). A tour of C# - Overview - C#. Microsoft Learn. https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/
+Bastiaansen, R., & Lanigan, R. (2019, December 3). VMware. SearchVMware. https://www.techtarget.com/searchvmware/definition/VMware#:~:text=With%20VM ware%20server%20virtualization%2C%20a,run%20on%20one%20physical%20serve r.
+
+Appendix
+
+Installation Links
+
+VMware Workstation 17 Player
+Install VMware Workstation 17 Player through this link: https://www.vmware.com/products/workstation-player/workstation-player- evaluation.html
+Visual Studio 2022
+Install Visual Studio 2022 through this link: https://visualstudio.microsoft.com/downloads/
+Cosmos User Kit 20221121
+Install Cosmos User Kit 20221121 through this link: https://github.com/CosmosOS/Cosmos/releases/tag/UserKit_20221121
+Inno Setup (innosetup-6.2.2.exe)
+Install innosetup-6.2.2.exe through this link: https://jrsoftware.org/download.php/is.exe
+UniqOS
+Access the UniqOS through this link: https://plmedu- my.sharepoint.com/:f:/g/personal/acantoni2021_plm_edu_ph/Eo7JbU4_8PhGsc CNhANefZMB_8TczpDJifyfVnVsegIAbA?e=OnjBGh
+
+Source Code
+Kernel.cs
+
+using Cosmos.HAL; using System;
+using System.Collections.Generic; using System.Linq;
+using System.Reflection.Metadata; using System.Text;
+using Sys = Cosmos.System;
+namespace uniqOS
+{
+public class Student
+{
+public string Name { get; set; } public int StudentID { get; set; } public string Course { get; set; }
+public List<int> Grades { get; set; } = new List<int>();
+}
+public class Kernel : Sys.Kernel
+{
+private List<Student> studentRecords = new List<Student>(); protected override void BeforeRun()
+{
+Console.Clear();
+E:
+Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine("Welcome to UniqOS. Please enter the password:"); Console.ForegroundColor = ConsoleColor.White;
+string password = "admin";
+string input = Console.ReadLine(); if (input == password)
+{
+Console.Clear(); Console.WriteLine(""); Console.WriteLine("");
+Console.WriteLine("	:::	:::	:::::	:::	:::	::::	::::	###");
+System.Threading.Thread.Sleep(200); Console.WriteLine("	:+:	:+:	:+: :+ System.Threading.Thread.Sleep(200); Console.WriteLine("	+#+	+#+	+#+ +# System.Threading.Thread.Sleep(200);
+Console.WriteLine("	#+#	#+#	#+#	#+ #+#	#+#	#+# +##+#	#+#	#+#	#+#");
+System.Threading.Thread.Sleep(200);
+Console.WriteLine("	#++#	###	## ###	###	###	###	###	###	###");
+System.Threading.Thread.Sleep(200);
+Console.WriteLine("	##	###	#####	###	#### ##	####	#####");
+System.Threading.Thread.Sleep(200); Console.WriteLine(""); Console.WriteLine(""); Console.WriteLine(""); Console.WriteLine(""); Console.WriteLine(""); Console.WriteLine(""); Console.WriteLine(""); Console.WriteLine(""); Console.WriteLine(""); Console.WriteLine(""); System.Threading.Thread.Sleep(1000);
+Console.WriteLine("uniqOS successfully booted."); System.Threading.Thread.Sleep(5000); Console.WriteLine("Please wait."); System.Threading.Thread.Sleep(1500); Console.Clear(); System.Threading.Thread.Sleep(1000);
+Console.WriteLine("You're now in terminal mode.\nType help to see commands"); Run();
+}
+else
+{
+
+Console.WriteLine("Password is wrong, try again"); goto E;
+}
+}
+protected override void Run()
+{
+//command lines
+Console.ForegroundColor = ConsoleColor.Green; string input = "";
+input = Console.ReadLine();
+
+
+
+
+
+CommandLineHelp(input);
+
+}
+private void CommandLineHelp(string input)
+{
+if (input == "help")
+{
+Console.ForegroundColor = ConsoleColor.Yellow; Console.WriteLine("");
+Console.WriteLine("help -- List of commands"); Console.WriteLine("version -- Show kernel's version"); Console.WriteLine("shutdown -- Shut down the system"); Console.WriteLine("restart -- Restart the computer"); Console.WriteLine("hexdec -- Hexadecimal to decimal converter"); Console.WriteLine("studrec -- Add student info to the record"); Console.WriteLine("inpgrades -- Add students' grade"); Console.WriteLine("liststuds -- Generate students' cards");
+}
+else if (input == "version")
+{
+Console.ForegroundColor = ConsoleColor.Yellow; Console.WriteLine("UniqOS kernel version 2.0"); Console.ForegroundColor = ConsoleColor.Green;
+}
+else if (input == "shutdown")
+{
+Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("System is shutting down in 5 seconds."); System.Threading.Thread.Sleep(1000); Console.WriteLine("System is shutting down in 4 seconds."); System.Threading.Thread.Sleep(1000); Console.WriteLine("System is shutting down in 3 seconds."); System.Threading.Thread.Sleep(1000); Console.WriteLine("System is shutting down in 2 seconds."); System.Threading.Thread.Sleep(1000); Console.WriteLine("System is shutting down in 1 second."); System.Threading.Thread.Sleep(1000);
+Sys.Power.Shutdown();
+}
+else if (input == "restart")
+{
+Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("System is rebooting in 5 seconds."); System.Threading.Thread.Sleep(1000); Console.WriteLine("System is rebooting in 4 seconds."); System.Threading.Thread.Sleep(1000); Console.WriteLine("System is rebooting in 3 seconds."); System.Threading.Thread.Sleep(1000); Console.WriteLine("System is rebooting in 2 seconds."); System.Threading.Thread.Sleep(1000); Console.WriteLine("System is rebooting in 1 second."); System.Threading.Thread.Sleep(1000); Sys.Power.Reboot();
+}
+else if (input == "?")
+{
+Console.ForegroundColor = ConsoleColor.Yellow; Console.WriteLine("");
+Console.WriteLine("help -- List of commands"); Console.WriteLine("version -- Show kernel's version"); Console.WriteLine("shutdown -- Shut down the system"); Console.WriteLine("restart -- Restart the computer"); Console.WriteLine("hexdec -- Hexadecimal to decimal converter"); Console.WriteLine("studrec -- Add student info to the record"); Console.WriteLine("inpgrades -- Add students' grade"); Console.WriteLine("liststuds -- Generate students' cards"); Console.ForegroundColor = ConsoleColor.Green;
+}
+else if (input == "commands")
+{
+Console.ForegroundColor = ConsoleColor.Yellow; Console.WriteLine("");
+Console.WriteLine("help -- List of commands"); Console.WriteLine("version -- Show kernel's version"); Console.WriteLine("shutdown -- Shut down the system"); Console.WriteLine("restart -- Restart the computer"); Console.WriteLine("hexdec -- Hexadecimal to decimal converter"); Console.WriteLine("studrec -- Add student info to the record"); Console.WriteLine("inpgrades -- Add students' grade"); Console.WriteLine("liststuds -- Generate students' cards"); Console.ForegroundColor = ConsoleColor.Green;
+}
+
+else if (input == "cmd")
+{
+Console.ForegroundColor = ConsoleColor.Yellow; Console.WriteLine("");
+Console.WriteLine("help -- List of commands"); Console.WriteLine("version -- Show kernel's version"); Console.WriteLine("shutdown -- Shut down the system"); Console.WriteLine("restart -- Restart the computer"); Console.WriteLine("hexdec -- Hexadecimal to decimal converter"); Console.WriteLine("studrec -- Add student info to the record"); Console.WriteLine("inpgrades -- Add students' grade"); Console.WriteLine("liststuds -- Generate students' cards"); Console.ForegroundColor = ConsoleColor.Green;
+}
+else if (input == "cmds")
+{
+Console.ForegroundColor = ConsoleColor.Yellow; Console.WriteLine("");
+Console.WriteLine("help -- List of commands"); Console.WriteLine("version -- Show kernel's version"); Console.WriteLine("shutdown -- Shut down the system"); Console.WriteLine("restart -- Restart the computer"); Console.WriteLine("hexdec -- Hexadecimal to decimal converter"); Console.WriteLine("studrec -- Add student info to the record"); Console.WriteLine("inpgrades -- Add students' grade"); Console.WriteLine("liststuds -- Generate students' cards"); Console.ForegroundColor = ConsoleColor.Green;
+}
+else if (input == "hexdec")
+{
+string Input;
+Console.WriteLine("Enter a Hexadecimal Number :"); Input = Console.ReadLine();
+int Output = int.Parse(Input, System.Globalization.NumberStyles.HexNumber); Console.WriteLine("The Decimal value is " + Output);
+Console.Read();
+}
+else if (input == "studrec")
+{
+do
+{
+Console.WriteLine("\nEnter student details:");
+Console.Write("Name: ");
+string name = Console.ReadLine();
+
+Console.Write("Student ID: "); int studentID;
+while (!int.TryParse(Console.ReadLine(), out studentID))
+{
+Console.WriteLine("Invalid input. Please enter a valid number for Student ID.");
+}
+Console.Write("Course: ");
+string course = Console.ReadLine();
+
+// Create a student object Student newStudent = new Student
+{
+Name = name, StudentID = studentID, Course = course
+};
+
+// Add the student to the records studentRecords.Add(newStudent);
+Console.WriteLine("Student record added successfully!"); Console.Write("Do you want to add another student? (yes/no): ");
+} while (Console.ReadLine().ToLower() == "yes");
+}
+else if (input == "liststuds")
+{
+Console.WriteLine("List of Students with Grades:");
+foreach (var student in studentRecords)
+{
+Console.WriteLine($"Name: {student.Name}"); Console.WriteLine($"Student ID: {student.StudentID}"); Console.WriteLine($"Program: {student.Course}");
+if (student.Grades.Count > 0)
+{
+Console.Write("Grades: "); Console.WriteLine(string.Join(", ", student.Grades));
+// Calculate average grade
+double averageGrade = student.Grades.Average(); Console.WriteLine($"Average Grade: {averageGrade:F2}");
+
+string failedStatus = averageGrade < 75 ? "Failed" : "Passed"; Console.WriteLine($"Status: {failedStatus}\n");
+}
+else
+{
+Console.WriteLine("No grades available.\n");
+}
+
+
+
+UniqOS.csproj
+
+
+Cosmo.Build.Targets
+
+
+
+
