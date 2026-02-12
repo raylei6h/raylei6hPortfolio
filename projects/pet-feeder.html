@@ -144,6 +144,16 @@
                     for automated pet feeding and monitoring. The system implements real-time bidirectional communication using MQTT 
                     protocol, enabling remote control, manual dispensing, and live storage tracking.
                 </p>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px; border-left: 4px solid var(--accent-color); margin-top: 1.5rem;">
+                    <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Problem Statement</h4>
+                    <p style="color: var(--gray-text); line-height: 1.7;">
+                        Pet owners face significant challenges in maintaining consistent feeding schedules due to busy work schedules, 
+                        frequent travel, and unpredictable lifestyles. Irregular feeding patterns cause stress, anxiety, digestive issues, 
+                        and behavioral problems in pets. Traditional automatic feeders lack intelligent features to monitor consumption, 
+                        detect supply depletion, or ensure hygiene. This project addresses these gaps by integrating IoT and Machine Learning 
+                        technologies to create an intelligent, automated, and remotely-monitored pet feeding system.
+                    </p>
+                </div>
             </div>
 
             <!-- Key Features -->
@@ -161,6 +171,40 @@
                     <li><i class="fas fa-video"></i> <strong>ESP32-CAM Integration:</strong> Live video streaming for remote pet monitoring</li>
                     <li><i class="fas fa-sync-alt"></i> <strong>Non-Volatile Storage:</strong> DS3231 RTC and NVS for reliable data persistence</li>
                 </ul>
+            </div>
+
+            <!-- Hardware Specifications -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">
+                    <i class="fas fa-microchip"></i> Hardware Specifications
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="feature-list">
+                        <h4 style="color: var(--accent-color); margin-bottom: 1rem;"><i class="fas fa-brain"></i> Microcontrollers</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> <strong>ESP32 Master:</strong> Scheduling, control logic, data management</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> <strong>ESP32-CAM Slave:</strong> Live video streaming, sensor integration</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> <strong>DS3231 RTC:</strong> Real-time clock for offline scheduling</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list">
+                        <h4 style="color: var(--accent-color); margin-bottom: 1rem;"><i class="fas fa-cogs"></i> Actuators & Sensors</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> <strong>Servo Motors:</strong> Precise food dispensing control</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> <strong>Water Pump + Relay:</strong> Automated water dispensing</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> <strong>Load Cell + HX711:</strong> Weight measurement &amp; tracking</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> <strong>Flow Sensor:</strong> Water consumption monitoring</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list">
+                        <h4 style="color: var(--accent-color); margin-bottom: 1rem;"><i class="fas fa-wifi"></i> Connectivity &amp; Storage</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> <strong>WiFi Module:</strong> Built-in WiFi connectivity (802.11 b/g/n)</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> <strong>NVS Storage:</strong> Non-volatile memory for data persistence</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> <strong>MQTT Protocol:</strong> Lightweight IoT communication</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <!-- Technology Stack -->
@@ -208,6 +252,26 @@
                         <i class="fas fa-video"></i>
                         <h4>ESP32-CAM</h4>
                         <p style="color: var(--gray-text); font-size: 0.9rem;">Video Streaming</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-dart"></i>
+                        <h4>Dart</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">UI Framework Language</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-file-code"></i>
+                        <h4>CMake</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Build Automation</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-database"></i>
+                        <h4>Firebase</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Cloud Storage &amp; Auth</p>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Machine Learning</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;">Pattern Analysis &amp; Prediction</p>
                     </div>
                 </div>
             </div>
@@ -391,6 +455,90 @@ void sendFeedCommand(int amount) {
                         <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem;">100%</h3>
                         <p>Feeding Accuracy</p>
                     </div>
+                    <div style="background: var(--primary-color); padding: 2rem; border-radius: 15px; text-align: center;">
+                        <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem;">95%</h3>
+                        <p>Operational Reliability</p>
+                    </div>
+                </div>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px; margin-top: 2rem; border-left: 4px solid var(--primary-color);">
+                    <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Key Achievements</h4>
+                    <ul style="list-style: none; padding: 0; color: var(--gray-text);">
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--primary-color); margin-right: 0.5rem;"></i> Successfully developed fully functional IoT-based pet feeder prototype</li>
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--primary-color); margin-right: 0.5rem;"></i> Implemented real-time remote monitoring and control via mobile application</li>
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--primary-color); margin-right: 0.5rem;"></i> Integrated Machine Learning for predictive food depletion alerts</li>
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--primary-color); margin-right: 0.5rem;"></i> Achieved consistent automation with offline scheduling capability</li>
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--primary-color); margin-right: 0.5rem;"></i> Validated through pilot testing with positive user feedback</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Project Team -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-users"></i> Project Team
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 10px; text-align: center; border: 1px solid rgba(0, 212, 255, 0.2);">
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Christian Raylie Q. Ilag</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;"><i class="fas fa-code"></i> Firmware Development &amp; IoT Integration</p>
+                    </div>
+                    <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 10px; text-align: center; border: 1px solid rgba(0, 212, 255, 0.2);">
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Ian Joshua F. Feruelo</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;"><i class="fas fa-mobile-alt"></i> Flutter App Development</p>
+                    </div>
+                    <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 10px; text-align: center; border: 1px solid rgba(0, 212, 255, 0.2);">
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Gaevin Josh Albaladejo</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;"><i class="fas fa-tools"></i> Hardware Assembly &amp; Testing</p>
+                    </div>
+                    <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 10px; text-align: center; border: 1px solid rgba(0, 212, 255, 0.2);">
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Vhernadette Joyce R. Matias</h4>
+                        <p style="color: var(--gray-text); font-size: 0.9rem;"><i class="fas fa-chart-bar"></i> Project Documentation &amp; Analysis</p>
+                    </div>
+                </div>
+                <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 10px; text-align: center; border: 1px solid rgba(0, 212, 255, 0.2); margin-top: 2rem;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Asiana A. Solis</h4>
+                    <p style="color: var(--gray-text); font-size: 0.9rem;"><i class="fas fa-cogs"></i> System Integration &amp; Quality Assurance</p>
+                </div>
+            </div>
+
+            <!-- Project Timeline -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-calendar"></i> Development Timeline
+                </h2>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                        <div style="border-left: 4px solid var(--primary-color); padding-left: 1.5rem;">
+                            <h4 style="color: var(--primary-color);">Phase 1: Research &amp; Requirements</h4>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin: 0.5rem 0;">Sept 1 - Sept 13, 2025</p>
+                            <p style="color: var(--gray-text); font-size: 0.85rem;">Literature review, component selection, system requirements</p>
+                        </div>
+                        <div style="border-left: 4px solid var(--accent-color); padding-left: 1.5rem;">
+                            <h4 style="color: var(--accent-color);">Phase 2: Design &amp; Planning</h4>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin: 0.5rem 0;">Sept 15 - Sept 27, 2025</p>
+                            <p style="color: var(--gray-text); font-size: 0.85rem;">Circuit diagrams, UI/UX design, data flow architecture</p>
+                        </div>
+                        <div style="border-left: 4px solid var(--secondary-color); padding-left: 1.5rem;">
+                            <h4 style="color: var(--secondary-color);">Phase 3: Development</h4>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin: 0.5rem 0;">Sept 29 - Oct 12, 2025</p>
+                            <p style="color: var(--gray-text); font-size: 0.85rem;">UI/UX coding, firmware development, component integration</p>
+                        </div>
+                        <div style="border-left: 4px solid #8338ec; padding-left: 1.5rem;">
+                            <h4 style="color: #8338ec;">Phase 4: Prototyping</h4>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin: 0.5rem 0;">Oct 13 - Oct 31, 2025</p>
+                            <p style="color: var(--gray-text); font-size: 0.85rem;">Assembly, IoT connectivity, ML model training</p>
+                        </div>
+                        <div style="border-left: 4px solid #fe006e; padding-left: 1.5rem;">
+                            <h4 style="color: #fe006e;">Phase 5: Testing &amp; Integration</h4>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin: 0.5rem 0;">Nov 1 - Nov 10, 2025</p>
+                            <p style="color: var(--gray-text); font-size: 0.85rem;">System integration, pilot testing, optimization</p>
+                        </div>
+                        <div style="border-left: 4px solid var(--primary-color); padding-left: 1.5rem;">
+                            <h4 style="color: var(--primary-color);">Phase 6: Evaluation &amp; Documentation</h4>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin: 0.5rem 0;">Nov 11 - Nov 29, 2025</p>
+                            <p style="color: var(--gray-text); font-size: 0.85rem;">Performance analysis, documentation, presentation</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -408,10 +556,96 @@ void sendFeedCommand(int amount) {
                 </ul>
             </div>
 
-            <!-- Call to Action -->
+            <!-- Future Improvements -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-rocket"></i> Future Enhancements
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="feature-list">
+                        <h4 style="color: var(--accent-color); margin-bottom: 1rem;">System Improvements</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Automated refill mechanism for continuous operation</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Solar charging &amp; battery backup for sustainability</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Enhanced camera module with better clarity &amp; calibration</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Redundant network connectivity (dual Wi-Fi/Bluetooth fallback)</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list">
+                        <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Feature Expansion</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> AI-powered pet activity recognition &amp; behavior analysis</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Multi-pet profiles for households with multiple animals</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Voice assistant integration (Google Assistant, Alexa, Siri)</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Health insights &amp; predictive feeding recommendations</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list">
+                        <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Analytics &amp; Sustainability</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Comprehensive analytics dashboard for feeding patterns</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Modular hardware design to minimize electronic waste</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Encrypted data transmission for privacy protection</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Integration with veterinary services for health monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Learnings -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-lightbulb"></i> Key Learnings & Insights
+                </h2>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px; border-top: 4px solid var(--accent-color);">
+                    <div style="display: grid; gap: 1.5rem;">
+                        <div>
+                            <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;"><i class="fas fa-cogs"></i> System Integration &amp; Testing</h4>
+                            <p style="color: var(--gray-text);">Modular testing and integration are vital to identifying hardware and software issues early. Allocating more time for debugging before full assembly ensures smooth component interaction.</p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;"><i class="fas fa-wifi"></i> IoT Connectivity</h4>
+                            <p style="color: var(--gray-text);">Stable IoT connections and optimized communication protocols (MQTT/HTTP) are essential for reliable real-time monitoring. Consider implementing redundant communication options for improved reliability.</p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;"><i class="fas fa-users"></i> User-Centered Design</h4>
+                            <p style="color: var(--gray-text);">Gathering user feedback significantly improved functionality and accessibility of the mobile app. Early usability testing and iterative updates enhance interface design.</p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;"><i class="fas fa-wrench"></i> Hardware Calibration</h4>
+                            <p style="color: var(--gray-text);">Repeated calibration and adjustments were key to achieving accurate food dispensing. Implement automated calibration features or self-check systems for future feeder versions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Reference -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class="fas fa-book-open"></i> Academic References
+                </h2>
+                <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px;">
+                    <p style="color: var(--gray-text); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem;">
+                        <strong>Project Title:</strong> FurfectMeal: An IoT-Based Automatic Pet Feeder System<br>
+                        <strong>Institution:</strong> Pamantasan ng Lungsod ng Maynila (PLM)<br>
+                        <strong>Course:</strong> CPE 0413 - Emerging Technologies in CPE<br>
+                        <strong>Submission Date:</strong> November 29, 2025<br>
+                        <strong>Alignment:</strong> UN Sustainable Development Goal 2 - Zero Hunger (adapted for animal welfare)
+                    </p>
+                    <div style="background: rgba(0, 212, 255, 0.1); padding: 1.5rem; border-radius: 10px; margin-top: 1rem;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.8rem;">Research Foundation</h4>
+                        <ul style="list-style: none; padding: 0; color: var(--gray-text); font-size: 0.9rem;">
+                            <li style="padding: 0.5rem 0;">• Pet ownership statistics: 66% of US households, 64% of Filipino households</li>
+                            <li style="padding: 0.5rem 0;">• Problem: Irregular feeding leads to stress, obesity, malnutrition, and behavioral issues</li>
+                            <li style="padding: 0.5rem 0;">• Solution: Integration of IoT and Machine Learning for intelligent automation</li>
+                            <li style="padding: 0.5rem 0;">• Impact: Promotes responsible pet ownership and advances smart home ecosystems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div style="background: var(--gradient-1); padding: 3rem; border-radius: 20px; text-align: center;">
-                <h2 style="margin-bottom: 1rem;">Interested in this project?</h2>
-                <p style="margin-bottom: 2rem;">Let's discuss how IoT solutions can solve real-world problems.</p>
+                <h2 style="margin-bottom: 1rem;">Ready to Transform Pet Care with IoT?</h2>
+                <p style="margin-bottom: 2rem;">This project demonstrates how emerging technologies can solve real-world challenges in animal welfare and smart home automation. Let's discuss IoT solutions for your needs.</p>
                 <a href="../index.html#contact" class="btn btn-secondary">
                     <i class="fas fa-envelope"></i> Get In Touch
                 </a>
