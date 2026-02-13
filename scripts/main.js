@@ -272,6 +272,18 @@ document.addEventListener('DOMContentLoaded', () => {
         cursor.style.top = e.clientY - 10 + 'px';
     });
 
+    // Handle PDF Download - Ensure it works properly
+    const cvDownloadLink = document.querySelector('a[href="assets/CV_ILAG-2025.pdf"]');
+    if (cvDownloadLink) {
+        cvDownloadLink.addEventListener('click', (e) => {
+            // Allow normal browser download behavior
+            e.stopPropagation();
+            // Ensure the link has proper attributes
+            cvDownloadLink.setAttribute('download', 'Christian-Raylie-Ilag-CV.pdf');
+            cvDownloadLink.setAttribute('type', 'application/pdf');
+        });
+    }
+
     // Cursor grows on hover over interactive elements
     document.querySelectorAll('a, button').forEach(element => {
         element.addEventListener('mouseenter', () => {
